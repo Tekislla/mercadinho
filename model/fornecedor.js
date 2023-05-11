@@ -1,5 +1,5 @@
 import { Sequelize } from "sequelize"
-import db from "../db.js"
+import db from "../src/db.js"
 
 const Fornecedor = db.define("fornecedores",{
     id: {

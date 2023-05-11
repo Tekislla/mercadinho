@@ -1,4 +1,5 @@
-import { Router } from "express";
+import express from "express";
+const routes = express.Router();
 
 import {
   createFornecedor,
@@ -25,27 +26,27 @@ import {
 } from "../controller/forma-pagto-controller.js";
 
 
-const router = Router();
+
 
 // Fornecedores
-router.post("/fornecedores/add", createFornecedor);
-router.get("/fornecedores", getFornecedores);
-router.get("/fornecedores/:id", getFornecedorById);
-router.put("/fornecedores/update", updateFornecedor);
-router.delete("/fornecedores/delete", deleteFornecedor);
+routes.post("/fornecedores/add", createFornecedor);
+routes.get("/fornecedores", getFornecedores);
+routes.get("/fornecedores/:id", getFornecedorById);
+routes.put("/fornecedores/update", updateFornecedor);
+routes.delete("/fornecedores/delete", deleteFornecedor);
 
 // Despesas
-router.post("/despesas/add", createDespesa);
-router.get("/despesas", getDespesas);
-router.get("/despesas/:id", getDespesaById);
-router.put("/despesas/update", updateDespesa);
-router.delete("/despesas/delete", deleteDespesa);
+routes.post("/despesas/add", createDespesa);
+routes.get("/despesas", getDespesas);
+routes.get("/despesas/:id", getDespesaById);
+routes.put("/despesas/update", updateDespesa);
+routes.delete("/despesas/delete", deleteDespesa);
 
 // Categorias
-router.get("/categorias", getCategorias);
+routes.get("/categorias", getCategorias);
 
 
 // Formas de pagamento
-router.get("/formas-pagto", getFormasPagto);
+routes.get("/formas-pagto", getFormasPagto);
 
-export default router;
+export { routes as default };
