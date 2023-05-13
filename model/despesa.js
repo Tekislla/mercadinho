@@ -23,9 +23,6 @@ const Despesa = db.define("despesas",{
     },
     fornecedor_id: {
         type: Sequelize.INTEGER
-    },
-    tags: {
-        type: Sequelize.STRING(255)
     }
 },
 {
